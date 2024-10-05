@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoice Generator</title>
+   <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Invoice Generator</h1>
+    <form id="invoiceForm">
+      <h2>Client Information</h2>
+      <label for="clientName">Client Name:</label>
+      <input type="text" id="clientName" required />
+
+      <label for="clientAddress">Client Address:</label>
+      <textarea id="clientAddress" required></textarea>
+
+      <h2>Invoice Details</h2>
+      <div id="itemContainer">
+        <div class="item">
+          <label for="itemDescription">Item Description:</label>
+          <input type="text" class="itemDescription" required />
+
+          <label for="itemQuantity">Quantity:</label>
+          <input type="number" class="itemQuantity" required />
+
+          <label for="itemPrice">Price per Item:</label>
+          <input type="number" class="itemPrice" step="0.01" required />
+
+          <label for="sgst">SGST (%):</label>
+          <input type="number" class="sgst" step="0.01" required />
+
+          <label for="cgst">CGST (%):</label>
+          <input type="number" class="cgst" step="0.01" required />
+        </div>
+      </div>
+      <button type="button" onclick="addItem()">Add Item</button>
+      <button type="button" onclick="generateInvoice()">Generate Invoice</button>
+    </form>
+   
+    
+   <script src="app.js"></script>
+  </body>
+</html>
